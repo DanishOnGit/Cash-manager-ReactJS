@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+*{
+  --primary-color:rgb(4, 104, 46);
+  --secondary-color:rgb(6, 167, 46);
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: auto
+}
+h1,h3{
+  font-family: 'Lato',sans-serif;
+  font-weight: 700;
+}
+h1{
+  color:var(--secondary-color);
+}
+p{
+  font-family: 'Lato',sans-serif;
+  font-weight: 300;
+}
+i{
+  color:var(--primary-color);
+}
+body{
+  background-color: black;
+}
+input{
+padding: 0.5rem;
+}
+.bill{
+border-radius: 1rem;
+outline: none;
+}
+.cash{
+  border-radius: 1rem;
+  outline: none;
+  }
+button{
+  margin: 1rem;
+  border-radius: 1rem;
+padding: 0.5rem 1.5rem;
+background-color: var(--secondary-color);
+border: none;
+}
+button :hover{
+color:white ;
+transition: 200ms;
+}
+th{
+  padding: 1rem;
+  background-color:var(--primary-color);
+  color: black;
+}
+.note{
+display: inline-block;
+color:white;
+
+}
+
+.notelist{
+  padding: 1rem;
+  background-color:var(--primary-color);
+
+}
+.changelist{
+  display: inline-block;
+}
+.changelistitem{
+ padding: 1rem ; 
+background-color: var(--secondary-color);
+color:white;
+}
+.finalOutputDiv{
+border: 2px solid green;
+
+}
+
+
+@media only screen and (max-width:600px){
+.changelistitem ,.notelist{
+  padding: 0.5rem;
+}
+}
+
+
+
+
+
+
+
