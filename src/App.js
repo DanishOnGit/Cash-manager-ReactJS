@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-var amount,billamount,cashamount;
-var notearray=["2000","500","100","20","10","5","1"]
-var notelistarray=[]
+let amount,billamount,cashamount;
+const notearray=["2000","500","100","20","10","5","1"]
+let notelistarray=[]
 
 export default function App() {
 const[state,setState]=useState("")
@@ -28,14 +28,14 @@ var newState=<div>
  </div>
  setState(newState)
   }else{
-    var newState="Please enter valid bill amount."
+    let newState="Please enter valid bill amount."
     setState(newState)
   }}
 
   function checkHandler(){
     notelistarray=["Nos of notes"]
     if(cashamount<0||!Number.isInteger(Number(cashamount))||cashamount==""||billamount<0||billamount==0){
-var newoutput="Please Enter valid input"
+let newoutput="Please Enter valid input"
 setOutput(newoutput)
     }
     else{
@@ -46,15 +46,15 @@ setOutput(newoutput)
     }
 else if(amount>0){
     
-    for(var i=0;i<notearray.length;i++){
+    for(let i=0;i<notearray.length;i++){
 
-      var quotient=Math.floor(amount/(Number(notearray[i])))
+      let quotient=Math.floor(amount/(Number(notearray[i])))
       notelistarray[i]=quotient
       // notelistarray.push(quotient)
       amount=amount%(Number(notearray[i]))
     
     }
-var newoutput=<div className="finalOutputDiv">
+let newoutput=<div className="finalOutputDiv">
 <h3>Return change:</h3>
 <table className="note">
 <tr><th>Notes</th></tr>
@@ -76,7 +76,7 @@ return <tr><td className="changelistitem" >{nos}</td></tr>
 // setOutput(newoutput)
   }
   else{
-    var newoutput=`Please collect ${Math.floor(billamount)-cashamount}$ more from customer`
+    let newoutput=`Please collect ${Math.floor(billamount)-cashamount}$ more from customer`
   // setOutput(newoutput)
 }}
 setOutput(newoutput)
